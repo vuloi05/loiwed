@@ -1,0 +1,58 @@
+/* Video background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Video ở dưới hình nền */
+}
+
+/* Hình ảnh Bác Hồ làm nền */
+.bac-ho-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bac_ho.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Hình nền ở giữa video và nội dung */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Body và container */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    z-index: 2;
+    position: relative;
+}
+
+/* Hiệu ứng chữ phát sáng */
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.2);
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Animation cho chữ */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
